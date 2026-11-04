@@ -18,3 +18,10 @@ export const Kids = () => {
   html += "</ol>";
   return html;
 };
+document.addEventListener("click", (clickEvent) => {
+  const itemClicked = clickEvent.target;
+
+  if (itemClicked.dataset.type === "child") {
+    window.alert(`This kid wishes for ${itemClicked.dataset.wish}`);
+  }
+});
